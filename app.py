@@ -27,7 +27,7 @@ if st.button("Predict"):
     }
 
     response = requests.post(
-        "http://127.0.0.1:8000/predict",
+        "https://diabetes-mlops-rit8.onrender.com/predict",
         json=data
     )
 
