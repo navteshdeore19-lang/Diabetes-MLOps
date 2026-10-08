@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("Diabetes Prediction System")
+st.title("Diabetes Prediction System ")
 st.write("Enter patient details below")
 
 pregnancies = st.number_input("Pregnancies", min_value=0, value=0)
@@ -27,9 +27,9 @@ if st.button("Predict"):
     }
 
     response = requests.post(
-        "https://diabetes-mlops-rit8.onrender.com/predict",
-        json=data
-    )
+    "http://127.0.0.1:8000/predict",
+    json=data
+)
 
     if response.status_code == 200:
         result = response.json()
